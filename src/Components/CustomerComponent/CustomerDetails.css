@@ -1,0 +1,25 @@
+.customer-card {
+    width: 100%; /* Takes full column width */
+    max-width: 400px; /* Restrict width */
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.customer-header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.customer-details p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
