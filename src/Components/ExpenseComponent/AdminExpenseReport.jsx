@@ -35,11 +35,13 @@ const AdminExpenseReport = () => {
 
   const loadExpenseData = () => {
     if (!selectedCustomerId) return;
+
     fetch(`http://localhost:9797/exp-mng/summary/${selectedCustomerId}`)
       .then((response) => response.json())
       .then((data) => {
+        console.log("Fetched data:", data); // For debug
         setExpenseData({
-          labels: data.map((item) => `Category ${item.categoryId}`),
+          labels: data.map((item) => item.categoryName || `Category ${item.categoryId}`),
           datasets: [
             {
               label: "Total Amount Spent",

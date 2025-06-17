@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-# ExpenseManagementSystem
-=======
-=======
->>>>>>> 2b59e6a (Initial commit)
-=======
-# ExpenseManagementSystem
-=======
->>>>>>> 090fc9491903e1672398360c6b5efb65ffef0d7a
->>>>>>> a442d76f1be3aa8c6aa6e9195e03a7f66fb24e61
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -82,14 +68,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 8fb8d7f (Initialize project using Create React App)
-=======
->>>>>>> 2b59e6a (Initial commit)
-=======
->>>>>>> 8fb8d7f (Initialize project using Create React App)
->>>>>>> 090fc9491903e1672398360c6b5efb65ffef0d7a
->>>>>>> a442d76f1be3aa8c6aa6e9195e03a7f66fb24e61
