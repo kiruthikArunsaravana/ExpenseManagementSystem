@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  # Service 1: Your Spring Boot Application
+  app:
+    # This image name comes from your pom.xml's Jib plugin configuration
+    image: kiruthik/expense-management:latest
+    ports:
+      # Maps your computer's port 9797 to the container's port 9797 (from your application.properties)
+      - "9797:9797"
+    environment:
+      # These values are passed to your application.properties file
+      - DB_USER=root
+      - DB_PASSWORD=root
+    depends_on:
+      # This ensures the database container starts before your application container
+      - db
+    restart: on-failure
+
+  # Service 2: The MySQL Database
+  db:
+    image: mysql:8.0
+    # This is the hostname your application uses to connect to the database
+    container_name: mysql-db
+    ports:
+      # You can use this to connect to the database from your local machine if needed
+      - "3306:3306"
+    environment:
+      # Configures the new MySQL database
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=expensedb
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    volumes:
+      # This saves your database data, so it's not lost when you stop the container
+      - mysql-data:/var/lib/mysql
+    restart: unless-stopped
+
+# Defines the named volume for data persistence
+volumes:
+  mysql-data:
