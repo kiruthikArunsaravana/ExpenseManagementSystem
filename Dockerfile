@@ -1,12 +1,12 @@
-# Use a stable Maven image with Java 17
-FROM maven:3.9.6-eclipse-temurin-17 AS build
+# Build Stage - Use Maven with JDK 21
+FROM maven:3.9.6-eclipse-temurin-21 AS build
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 RUN mvn clean package -DskipTests
 
-# Use a stable JDK 17 runtime image
-FROM eclipse-temurin:17-jdk-jammy
+# Runtime Stage - Use lightweight JDK 21
+FROM eclipse-temurin:21-jdk-jammy
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 EXPOSE 9797
